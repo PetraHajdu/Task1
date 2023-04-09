@@ -1,0 +1,13 @@
+mat-card {
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.mat-error {
+  font-size: 5px;
+}
