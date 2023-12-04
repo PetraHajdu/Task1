@@ -16,6 +16,9 @@ import { MatInputModule } from '@angular/material/input';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { SuccessDialogComponent } from './success-dialog/success-dialog.component';
+import { ErrorDialogComponent } from './error-dialog/error-dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 
@@ -23,7 +26,9 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
   declarations: [
     AppComponent,
     RegistrationFormComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    SuccessDialogComponent,
+    ErrorDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +42,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     NoopAnimationsModule,
     MatCardModule,
     MatCheckboxModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,16 @@
+.alert-box {
+    color:#555;
+    border-radius:10px;
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+}
+
+.alert-box span {
+    font-weight:bold;
+    text-transform:uppercase;
+}
+
+.error {
+    background:#ffecec;
+    border:1px solid #f5aca6;
+}

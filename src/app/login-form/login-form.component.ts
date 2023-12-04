@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { MatDialog } from '@angular/material/dialog';
+
+import { SuccessDialogComponent } from '../success-dialog/success-dialog.component';
+import { ErrorDialogComponent } from '../error-dialog/error-dialog.component';
 
 
 
@@ -16,7 +20,7 @@ export class LoginFormComponent implements OnInit {
 
   users: any;
 
-  constructor(private formBuilder: FormBuilder, private http: HttpClient) { }
+  constructor(private formBuilder: FormBuilder, private http: HttpClient, private dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
@@ -50,14 +54,37 @@ export class LoginFormComponent implements OnInit {
   
       if (user) {
         console.log('Login successful');
+        this.openLoginSuccessfulDialog();
       } else {
         console.log('Login failed');
+        this.openLoginFailedDialog();
       }
     } else {
       console.log('No users found');
+      this.openNoUserFoundDialog();
     }
   }
+
+  openLoginSuccessfulDialog(): void {
+    this.dialog.open(SuccessDialogComponent, {
+      width: '300px',
+      data: { message: 'Login successful!' }
+    });
+  }
   
+  openLoginFailedDialog(): void {
+    this.dialog.open(ErrorDialogComponent, {
+      width: '300px',
+      data: { message: 'Login failed!' }
+    })
+  }
+
+  openNoUserFoundDialog(): void {
+      this.dialog.open(ErrorDialogComponent, {
+        width: '300px',
+        data: { message: 'No users found!' }
+      });
+  }
 
 }
 
