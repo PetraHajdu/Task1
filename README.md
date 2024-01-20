@@ -7,12 +7,12 @@ This is a simple Angular application implementing a user registration and login 
 - User Registration: Allows users to create a new account with their personal information.
   ![](src/assets/1.png)
 - User Login: Provides a login form for existing users to log in.
-  ![](assets/2.png)
+  ![](src/assets/2.png)
 - Custom Validators: Implements custom Angular validators for password matching and terms acceptance.
-  ![](assets/3.png)
-  ![](assets/7.png)
+  ![](src/assets/3.png)
+  ![](src/assets/7.png)
 - Server Backend: Includes a simple Express.js server to handle user registration and login.
-  ![](assets/6.png)
+  ![](src/assets/6.png)
 
 ## Getting Started
   
